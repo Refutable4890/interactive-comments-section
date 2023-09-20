@@ -37,7 +37,7 @@ export default function CommentSection() {
     })
 
   return (
-    <CommentList>
+    <CommentList className="mx-auto max-w-screen-md">
       <CommentList>{commentComponents}</CommentList>
       <CommentInput mode="createComment" placeholder="Add a comment…" />
     </CommentList>
