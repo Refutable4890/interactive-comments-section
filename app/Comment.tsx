@@ -80,8 +80,8 @@ function Comment({ commentID }: CommentProps): React.ReactNode {
 
   return (
     <>
-      <div className="grid grid-cols-[max-content_1fr] gap-x-2 gap-y-3 rounded-lg bg-white p-4 sm:grid-cols-[min-content_minmax(min-content,1fr)_1fr] sm:gap-x-4">
-        <div className="col-span-full flex items-center gap-4 sm:col-start-2 sm:col-end-3 sm:row-start-1">
+      <div className="grid grid-cols-[max-content_1fr] gap-x-2 gap-y-3 rounded-lg bg-white p-4 sm:grid-cols-[min-content_minmax(min-content,1fr)_minmax(min-content,max-content)] sm:gap-x-4">
+        <div className="col-span-full flex flex-wrap items-center gap-4 sm:col-start-2 sm:col-end-3 sm:row-start-1">
           <Image
             className="shrink-0"
             src={comment.user.image.png}
@@ -97,7 +97,7 @@ function Comment({ commentID }: CommentProps): React.ReactNode {
               </span>
             )}
           </p>
-          <p className="text-grayish-blue">
+          <p className="grow basis-[min-content] text-grayish-blue">
             {new Date(comment.createdAt).toLocaleString()}
           </p>
         </div>
